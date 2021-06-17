@@ -6,14 +6,15 @@
 </template>
 
 <script>
-  export default {
-    computed: {
-      restaurantList() {
-        console.log(this.$store.state.restaurantList)
-        return this.$store.state.restaurantList; 
-      }
-    },
-  }
+import { mapState } from 'vuex';
+
+export default {
+  computed: {
+    ...mapState([
+      'restaurantList',
+    ])
+  },
+};
 </script>
 
 <style lang="scss" scoped>
