@@ -6,14 +6,29 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 
 export default {
-  computed: {
-    ...mapState([
-      'restaurantList',
+  methods: {
+    ...mapActions([
+      'setRestaurant', //also supports payload `this.nameOfAction(amount)` 
     ])
   },
+  computed: {
+    ...mapState([
+      'restaurantList'
+    ])
+  }
+
+//   computed: {
+// restaurantList() {
+// return this.$store.state.restaurantList;
+// }
+// },
+// mounted() {
+// this.$store.dispatch('setRestaurant');
+// }
+
 };
 </script>
 
