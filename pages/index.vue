@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Hello world</h1>
-    <div v-for="restaurant in restaurantList" :key="restaurant.id">{{ restaurant }}</div>
+    <div v-for="restaurant in restaurantList" :key="restaurant.servicePlaceId">{{ restaurant }}</div>
   </div>
 </template>
 
