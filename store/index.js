@@ -1,10 +1,5 @@
 export const state = () => ({
-    restaurantList: [
-        {
-            "id": 1,
-            "name": "heyyy"
-        }
-    ]
+    restaurantList: []
 })
 
 // export const getters = {
@@ -13,14 +8,20 @@ export const state = () => ({
 //     }
 // }
 
-// export const mutations = {
-//     updateValue: (state, payload) => {
-//         state.value = payload
-//     }
-// }
+export const mutations = {
+    SET_RESTAURANT: (state, payload) => {
+        state.restaurantList = payload
+    }
+}
 
-// export const actions = {
-//     updateActionValue({ commit }) {
-//         commit('updateValue', payload)
-//     }
-// }
+export const actions = {
+    setRestaurant: async ({ commit }, payload) => {
+        try {
+            let result = await axios.get('http://denj.ichimoku-fibo.ir/menu?servicePlaceId=1') 
+            commit('SET_RESTAURANT', result.data)
+            console.log('result')
+        } catch (error) {
+            console.log(error)
+        }
+    }
+}
