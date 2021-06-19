@@ -1,6 +1,36 @@
 export const state = () => ({
-    counter: 10
+    counter: 0
 })
+
+// export const getters = {
+//     getterValue: state => {
+//         return state.value
+//     }
+// }
+
+export const mutations = {
+    decreaseCounter: (state) => {
+        state.counter--
+    },
+    increaseCounter: (state) => {
+        state.counter++
+    }
+}
+
+export const actions = {
+    increaseCounter() {
+        axios('https://www.random.org/integers/?num=1&min=1&max=100&col=5&base=10&format=html&rnd=new').then(response => {
+            console.log('response: ', response)
+        })
+        commit('updateValue', payload)
+    }
+}
+
+
+
+// export const state = () => ({
+//     value: 'myvalue'
+// })
 
 // export const getters = {
 //     getterValue: state => {
@@ -19,10 +49,6 @@ export const state = () => ({
 //         commit('updateValue', payload)
 //     }
 // }
-
-
-
-
 
 
 
