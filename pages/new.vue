@@ -1,14 +1,11 @@
 <template>
-    <div>
-        <div class="countwr">
-            0
-        </div>
-        <div class="buttons">
-            <button>-</button>
-            <button>+</button>
-        </div>
-        <v-btn>f</v-btn>
-    </div>
+    <v-app>
+        <v-container>   
+                <div>{{ $store.state.counter }}</div>
+                <v-btn>-</v-btn>
+                <v-btn>+</v-btn>
+        </v-container>
+    </v-app>
 </template>
 
 <script>
