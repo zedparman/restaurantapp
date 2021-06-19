@@ -1,9 +1,9 @@
 <template>
     <v-app>
         <v-container>   
-                <div>{{ $store.state.counter }}</div>
-                <v-btn>-</v-btn>
-                <v-btn>+</v-btn>
+                <div mt-5>{{ $store.state.counter }}</div>
+                <v-btn @click="$store.dispatch('decreaseCounter')">-</v-btn>
+                <v-btn @click="$store.dispatch('increaseCounter')">+</v-btn>
         </v-container>
     </v-app>
 </template>
