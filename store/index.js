@@ -1,5 +1,5 @@
 export const state = () => ({
-    value: 'myvalue'
+    counter: 10
 })
 
 // export const getters = {
