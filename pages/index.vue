@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Hello world</h1>
+    <h1>Hello world!</h1>
     <!-- <div v-for="restaurant in restaurantList" :key="restaurant.servicePlaceId">{{ restaurant }}</div> -->
     <div v-for="todo in allTodos" :key="todo.id">{{ todo.title }}</div>
 
